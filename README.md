@@ -1,11 +1,19 @@
-Patrón cliente - servidor
+Presentación del Producto
+1. Descripción del Producto
+- Se ha desarrollado una aplicación cliente-servidor utilizando Node.js, Express y WebSockets (socket.io). Esta aplicación permite una comunicación bidireccional en tiempo real entre un cliente y un servidor. El cliente envía mensajes al servidor, el cual procesa y responde de inmediato. La arquitectura sigue el patrón cliente-servidor.
 
-Aplicación basica realizada en Node.js con express
+2. Código y Explicación de su Operación
+El repositorio contiene dos archivos principales:
+- server.js: Configura el servidor Express y socket.io. Escucha las conexiones entrantes de clientes y gestiona el envío y recepción de mensajes.
+- client.js: Funciona como cliente, conectándose al servidor mediante WebSockets y permitiendo la interacción desde la terminal.
+Puedes revisar los detalles del código en el repositorio.
 
-Logica del patron realizado:
+3. Montaje y Herramientas Utilizadas
+Herramientas:
+- Node.js: Entorno para ejecutar JavaScript del lado del servidor.
+- Express: Framework para la construcción del servidor HTTP.
+- socket.io y socket.io-client: Para manejar la comunicación en tiempo real.
+- GitHub: Repositorio para gestionar el código.
 
-1. server.js
-Este archivo configura el servidor de WebSocket usando socket.io y el módulo nativo http de Node.js junto con express. Crea un servidor HTTP que también sirve rutas básicas mediante Express. Al iniciar, escucha conexiones de clientes WebSocket y maneja eventos como la recepción de mensajes y el envío de respuestas. Cada vez que un cliente envía un mensaje, el servidor lo recibe, procesa el mensaje y responde de inmediato al cliente.
-
-2. client.js
-Este archivo actúa como el cliente que se conecta al servidor WebSocket. Utiliza socket.io-client para establecer la conexión con el servidor y envía mensajes a través de la conexión WebSocket. El cliente también escucha las respuestas del servidor y las muestra en la consola. Permite al usuario ingresar mensajes desde la terminal, enviarlos al servidor y recibir respuestas sin bloquear la interacción. El cliente se desconecta cuando el usuario escribe exit.
+4. Aplicación y Objetivo del Ejercicio
+La aplicación tiene como objetivo implementar y demostrar el patrón cliente-servidor en un entorno práctico. Este tipo de arquitectura es comúnmente utilizado en sistemas de chat, juegos en línea y aplicaciones de notificación en tiempo real. El cliente envía mensajes que son recibidos por el servidor y procesados en tiempo real, con respuestas inmediatas.
